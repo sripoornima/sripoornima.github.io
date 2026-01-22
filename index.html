@@ -1,964 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sripoornimadevi T S - Portfolio</title>
-  <!-- Favicon (S Icon) -->
-  <link rel="icon" type="image/" href="favicon.jpg" sizes="64x64">
-  <link rel="apple-touch-icon" href="favicon.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sripoornimadevi T S | Portfolio</title>
+    <link rel="icon" type="images/jpg" href="images\Grok - S favicon.jpg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Optional: Multiple sizes -->
-  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-    }
-  
-    /* ==================== NAVBAR ==================== */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 30px;
-      background: #ffffff;
-      box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-  
-    nav .logo {
-      display: flex;
-      align-items: center;
-      font-weight: 700;
-      font-size: 18px;
-      color: #000;
-      white-space: nowrap;
-    }
-  
-    nav .logo img {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      margin-right: 8px;
-    }
-  
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 18px;
-      margin: 0;
-      padding: 0;
-    }
-  
-    nav ul li {
-      display: inline;
-    }
-  
-    nav ul li a {
-      text-decoration: none;
-      color: #000;
-      font-weight: 500;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 12px;
-      border-radius: 20px;
-      transition: all 0.3s ease;
-    }
-  
-    nav ul li a:hover {
-      background: #000;
-      color: #fff;
-    }
-  
-    .hero {
-      width: 1490px;
-      height: 400px;
-      margin: 20px auto;
-      background: url('Workplace.jpg') center/cover no-repeat;
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-    
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
-    
-    .hero-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      color: #fff;
-      padding: 20px 40px;
-      border-radius: 10px;
-    }
-    
-    .hero h1 {
-      text-align: center;
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin: 0 0 12px 0;
-      white-space: pre;
-    }
-    
-    .hero h2 {
-      text-align: center;
-      font-size: 1.4rem;
-      font-weight: 500;
-      line-height: 1.4;
-      margin-bottom: 24px;
-      white-space: pre-wrap;
-    }
-    
-    /* View My Work Button */
-    .view-work-btn {
-      background: #ffffff;
-      color: #000;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 12px 32px;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: all 0.3s ease;
-    }
-    
-    .view-work-btn:hover {
-      background: #f0f0f0;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-    }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero { 
-        width: 90%; 
-        height: 380px; 
-      }
-      .hero h1 { font-size: 1.8rem; }
-      .hero h2 { font-size: 1.2rem; margin-bottom: 20px; }
-      .view-work-btn { 
-        padding: 10px 24px; 
-        font-size: 0.95rem; 
-      }
-    }
-  
- 
-  
-    /* ==================== ABOUT SECTION ==================== */
-    .about-section {
-      padding: 80px 40px;
-      background: #f9f9f9;
-    }
-  
-    .about-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 60px;
-      flex-wrap: wrap;
-    }
-  
-    .about-image img {
-      width: auto;
-      max-width: 350px;
-      height: auto;
-      object-fit: contain;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-      border-radius: 10px;
-      display: block;
-      margin-left: 20px;
-    }
-  
-    .about-content {
-      flex: 1;
-      min-width: 400px;
-    }
-  
-    .about-content h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #333;
-    }
-  
-    .about-content p {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: #555;
-      margin-bottom: 15px;
-    }
-  
-    @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 30px;
-      }
-      .about-image img {
-        width: 80%;
-        max-width: 250px;
-      }
-      .about-content h2 {
-        font-size: 1.8rem;
-      }
-    }
-  
-    /* ==================== EDUCATION SECTION ==================== */
-    .education-section {
-      padding: 60px 20px;
-      background: #ffffff;
-    }
-  
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-  
-    .section-title h2 {
-      font-size: 2rem;
-      color: #333;
-    }
-  
-    /* Education container (ROW layout) */
-    .education-container {
-      display: flex;
-      justify-content: center;   /* 🔥 Center horizontally */
-      align-items: stretch;
-      gap: 25px;                 /* Space between cards */
-      flex-wrap: wrap;           /* Responsive wrapping */
-      margin-top: 20px;
-    }
-  
-    /* Each Education Card */
-    .education-card {
-      color: #fff;
-      padding: 25px 18px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-      width: 320px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-  
-    /* Card 1 (Most recent - B.E) */
-    .education-card:nth-child(1) {
-      background: #000; /* Black */
-      color: #fff;
-    }
-  
-    /* Card 2 (Class 12th) */
-    .education-card:nth-child(2) {
-      background: #BFC0C0; /* Elegant gray */
-      color: #111;
-    }
-  
-    /* Card 3 (Class 10th) */
-    .education-card:nth-child(3) {
-      background: #fff; /* White */
-      color: #111;
-      border: 1px solid #ddd;
-    }
-  
-    .education-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-    }
-  
-    .education-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-  
-    .education-card p {
-      font-size: 0.95rem;
-      margin: 5px 0;
-      line-height: 1.4;
-    }
-  
-    .edu-year {
-      font-weight: 500;
-      opacity: 0.9;
-    }
-  
-    .edu-percentage {
-      font-weight: 400;
-      opacity: 0.8;
-    }
-  
-    @media (max-width: 768px) {
-      .education-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-      }
-      .education-card {
-        width: 90%;
-      }
-    }
-    
-/* ==================== SKILLS SECTION ==================== */
-.skills-section{
-  padding:80px 40px;
-  background:#f9f9f9;
-}
-.skills-section h2{
-  text-align:center;
-  font-size:2rem;
-  margin-bottom:40px;
-  color:#222;
-  font-weight:700;
-}
-.skills-grid{
-  max-width:1200px;
-  margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
-}
-.skill-card{
-  background:#fff;
-  border-radius:16px;
-  padding:24px;
-  box-shadow:0 6px 16px rgba(0,0,0,.08);
-  transition:transform .2s ease,box-shadow .2s ease;
-}
-.skill-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 24px rgba(0,0,0,.12);
-}
-.skill-card-title{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-size:1.25rem;
-  font-weight:600;
-  color:#1e293b;
-  margin-bottom:16px;
-}
-.skill-card-title i{font-size:1.4rem;color:#475569;}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-.badge-list{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 14px;
-  border-radius:999px;
-  font-size:.9rem;
-  font-weight:500;
-  color:#fff;                     /* <-- text is white */
-  transition:all .25s ease;
-}
-.badge i{font-size:1rem;}
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
 
-/* ---- EXACT COLORS FROM YOUR SECOND IMAGE ---- */
-.lang-java      {background:;}
-.lang-c         {background:#a0c4ff;}
-.lang-plsql     {background:#ff9e9e;}
+        #home {
+            height: 500px;
+            background-image: url('./images/Workplace.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 80px 10px 10px 10px;
+            border-radius: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* overlay color */
+            background-blend-mode: darken;
+            /* blends overlay with bg */
+            color: rgb(255, 255, 255);
 
-.db-mysql       {background:#9ed7ff;}
-.db-oracle      {background:#ff9e9e;}
+        }
 
-.be-spring      {background:#a0e6a0;}
-.be-boot        {background:#a0e6a0;}
-.be-mvc         {background:#ffcc80;}
-.be-hibernate   {background:#d8b4ff;}
-.be-jdbc        {background:#80e6d2;}
-.be-rest        {background:#b3b3ff;}
+        #nav-items a {
+            color: black;
+        }
 
-.fe-html        {background:#ff9e80;}
-.fe-css         {background:#80b3ff;}
-.fe-js          {background:#fff59e;}
-.fe-bootstrap   {background:#e6b3ff;}
-.fe-thymeleaf   {background:#a0e6a0;}
+        #mobile-menu a {
+            color: black;
+            padding: 10px;
+        }
 
-.tool-eclipse   {background:#d8b4ff;}
-.tool-vscode    {background:#80b3ff;}
-.tool-postman   {background:#ff8080;}
-.tool-ps        {background:#80d4ff;}
-.tool-git       {background:#ffcc80;}
+        #mobile-menu a:hover {
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+        }
 
-.meth-sdlc      {background:#80e6d2;}
-.meth-agile     {background:#a0e6a0;}
+        #nav-items a:hover {
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+        }
 
-/* ---- HOVER – same colour, just a tiny lift ---- */
-.badge:hover{
-  transform:translateY(-2px);
-  box-shadow:0 4px 8px rgba(0,0,0,.15);
-}
+        .skill-tag {
+            padding: 0.5rem 0.75rem;
+            background-color: rgb(255, 255, 255);
+            border-radius: 0.75rem;
+            display: flex;
+            color: black;
+            align-items: center;
+            transition: background-color 0.2s, color 0.2s;
+        }
 
-/* ---- RESPONSIVE ---- */
-@media(max-width:992px){
-  .skills-grid{grid-template-columns:1fr 1fr;}
-}
-@media(max-width:640px){
-  .skills-grid{grid-template-columns:1fr;}
-  .skill-card{padding:18px;}
-  .badge{font-size:.85rem;padding:7px 12px;}
-}
+        .skill-tag:hover {
+            background-color: #00000074;
+            /* hover:bg-gray-300 */
+            color: #ffffff;
+            /* hover:text-gray-500 */
+        }
 
- 
-.projects-grid 
-{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+        progress {
+            height: 20px;
+        }
 
-/* Card */
-.project-card {
-  background: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
-}
+        progress::-webkit-progress-bar {
+            background-color: #eee;
+            border-radius: 10px;
+        }
 
-/* Image */
-.project-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
+        progress::-webkit-progress-value {
+            background-color: #4caf50;
+            border-radius: 10px;
+        }
 
-/* Content */
-.project-content {
-  padding: 24px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-.project-content h3 {
-  font-size: 1.35rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #212529;
-}
-.project-content p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 16px;
-  flex-grow: 1;
-}
+        progress::-moz-progress-bar {
+            background-color: #4caf50;
+            border-radius: 10px;
+        }
 
-/* GitHub button – black pill */
-.github-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #000;
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding: 10px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  transition:  0.3s ease;
-  align-self: flex-start;
-}
-.github-btn:hover {
-  background: #222;
-}
-/* ===== RESUME & CONTACT ===== */
-.cta {
-  text-align: center;
-  padding: 80px 20px;
-}
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: black;
-  color: white;
-  padding: 14px 32px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
 
-.btn:hover {
-  background: grey;
-  transform: translateY(-3px);
-}
-
-.contact-info {
-  margin-top: 40px;
-  color: var(--text-muted);
-  font-size: 1.1rem;
-}
-
-.contact-info a {
-  color: var(--accent);
-}
-
-
-  /* ===== FOOTER ===== */
-  footer {
-    text-align: center;
-    padding: 30px;
-    color: white;
-    font-size: 1.2rem;
-    background-color: #000;
-    border-top: 1px solid var(--border);
-  }
-</style>
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">
-      Sripoornimadevi T S
-    </div>
-    <ul>
-      <li><a href="#hero"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
-      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-      <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-      <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-      <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
-      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
-  </nav>
-  <section class="hero" id="hero">
-    <div class="hero-overlay">
-      <h1 id="typing-name">Hi, I'm Sripoornimadevi T S</h1>
-      <h2 id="typing-text">Software Engineering Graduate with a keen interest<br>in innovation and problem-solving.</h2>
-    </div>
-  
-    <!-- Centered Button at Bottom of Carousel -->
-    <a href="#projects" class="view-work-btn position-absolute start-50 translate-middle-x" style="bottom: 60px; z-index: 3;">View My Work</a>
-  </section>
+<body class=" scroll-smooth">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg w-full fixed z-10"
+        style="background-color: rgba(255, 255, 255, 0.771); backdrop-filter: blur(10px); top: 0; left: 0;">
+        <div class="max-w-7xl mx-auto px-2">
+            <div class="flex justify-between h-16">
 
-<!-- About Section -->
-<section id="about" class="about-section">
-  <div class="about-container">
-    <!-- Left: Profile Picture -->
-    <div class="about-image">
-      <img src="1456 copy.jpg" alt="Sripoornimadevi T S">
-    </div>
-    <!-- Right: Career Objective -->
-    <div class="about-content">
-      <h2>About Me</h2>
-      <p>
-        A passionate and innovative young professional with a keen desire to pursue a career<br> in Information Technology
-        with a leading company committed to exceeding targets<br>and ensuring team success.
-      </p>
-      <p>
-        I possess excellent analytical and problem-solving skills, combined with magnificent<br>
-        communication skills that aid me in working within a team environment and independently.<br>I plan to
-        further develop my skills while contributing to the company’s growth by working in <br>exciting new
-        opportunities provided.
-      </p>
-    </div>
-  </div>
-</section>
-<!-- Education Section -->
-<section id="education" class="education-section">
-  <div class="section-title">
-    <h2>Education</h2>
-  </div>
-  <div class="education-container">
-    <!-- Card 1 -->
-    <div class="education-card">
-      <h3>B.E – Computer Science</h3>
-      <p>Knowledge Institute of Technology (KIOT)</p>
-      <p class="edu-year">2021 – 2025</p>
-      <p class="edu-percentage">Percentage: 82.6%</p>
-    </div>
-    <!-- Card 2 -->
-    <div class="education-card">
-      <h3>Class 12th</h3>
-      <p>Sri Vidya Mandir Senior Secondary School</p>
-      <p class="edu-year">2019 – 2020</p>
-      <p class="edu-percentage">Percentage: 83.6%</p>
-    </div>
-    <!-- Card 3 -->
-    <div class="education-card">
-      <h3>Class 10th</h3>
-      <p>Sri Vidya Mandir Senior Secondary School</p>
-      <p class="edu-year">2017 – 2018</p>
-      <p class="edu-percentage">Percentage: 81.2%</p>
-    </div>
-  </div>
-</section>
-<!-- ==================== SKILLS SECTION ==================== -->
-<section class="skills-section">
-  <h2>My Skills</h2>
-  <div class="skills-grid">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="flex text-2xl font-bold text-gray-800"><img src="images\1456 copy.jpg" alt=""
+                     
+                            class="w-7 h-7 mr-2" style="border-radius: 100px;">Sripoornimadevi T S</a>
+                </div>
 
-    <!-- Languages -->
-    <div class="skill-card">
-      <div class="skill-card-title"><i class="fas fa-code"></i> Languages</div>
-      <div class="badge-list">
-        <div class="badge lang-java"><i class="fab fa-java"></i> Java</div>
-        <div class="badge lang-c"><i class="fas fa-copyright"></i> C</div>
-        <div class="badge lang-plsql"><i class="fas fa-database"></i> PL/SQL</div>
-      </div>
-    </div>
+                <!-- Hamburger button (mobile only) -->
+                <div class="flex items-center md:hidden">
+                    <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
 
-    <!-- Databases -->
-    <div class="skill-card">
-      <div class="skill-card-title"><i class="fas fa-database"></i> Databases</div>
-      <div class="badge-list">
-        <div class="badge db-mysql"><i class="fas fa-server"></i> MySQL</div>
-        <div class="badge db-oracle"><i class="fas fa-server"></i> Oracle</div>
-      </div>
-    </div>
-
-    <!-- Backend -->
-    <div class="skill-card">
-      <div class="skill-card-title"><i class="fas fa-server"></i> Backend</div>
-      <div class="badge-list">
-        <div class="badge be-spring"><i class="fas fa-leaf"></i> Spring Frameworks</div>
-        <div class="badge be-boot"><i class="fas fa-shoe-prints"></i> Spring Boot 3</div>
-        <div class="badge be-mvc"><i class="fas fa-project-diagram"></i> Spring MVC</div>
-        <div class="badge be-hibernate"><i class="fas fa-link"></i> Hibernate</div>
-        <div class="badge be-jdbc"><i class="fas fa-plug"></i> JDBC</div>
-        <div class="badge be-rest"><i class="fas fa-exchange-alt"></i> REST APIs</div>
-      </div>
-    </div>
-
-    <!-- Frontend -->
-    <div class="skill-card">
-      <div class="skill-card-title"><i class="fas fa-desktop"></i> Frontend</div>
-      <div class="badge-list">
-        <div class="badge fe-html"><i class="fab fa-html5"></i> HTML5</div>
-        <div class="badge fe-css"><i class="fab fa-css3-alt"></i> CSS3</div>
-        <div class="badge fe-js"><i class="fab fa-js-square"></i> JavaScript</div>
-        <div class="badge fe-bootstrap"><i class="fab fa-bootstrap"></i> Bootstrap</div>
-        <div class="badge fe-thymeleaf"><i class="fas fa-leaf"></i> Thymeleaf</div>
-      </div>
-    </div>
-
-    <!-- Tools -->
-    <div class="skill-card">
-      <div class="skill-card-title"><i class="fas fa-tools"></i> Tools</div>
-      <div class="badge-list">
-        <div class="badge tool-eclipse"><i class="fas fa-sun"></i> Eclipse</div>
-        <div class="badge tool-vscode"><i class="fas fa-code"></i> VS Code</div>
-        <div class="badge tool-postman"><i class="fas fa-paper-plane"></i> Postman</div>
-        <div class="badge tool-ps"><i class="fab fa-adobe"></i> Adobe Photoshop</div>
-        <div class="badge tool-git"><i class="fab fa-github"></i> Git & GitHub</div>
-      </div>
-    </div>
-
-    <!-- Methodologies -->
-    <div class="skill-card">
-      <div class="skill-card-title"><i class="fas fa-clipboard-list"></i> Methodologies</div>
-      <div class="badge-list">
-        <div class="badge meth-sdlc"><i class="fas fa-project-diagram"></i> SDLC</div>
-        <div class="badge meth-agile"><i class="fas fa-running"></i> Agile</div>
-      </div>
-    </div>
-
-  </div>
-</section>
- <!-- Projects -->
-
-<section id="projects" class="py-5">
-  <div class="container">
-    <h2 class="section-title text-center mb-5">My Projects</h2>
-
-    <div class="projects-grid">
-
-      <!-- Project 1 -->
-      <div class="project-card">
-        <img src="mobicom.jpg" alt="PrepaidGo" class="project-img">
-        <div class="project-content">
-          <h3>"PrepaidGo" - Mobile Recharge App</h3>
-          <p>Built a full-stack web application for mobile prepaid services with user registration, plan browsing, and
-            transaction history featuresIntegrated Spring Security for session-based login and role-based access for admin
-         and user functionalities
-            Implemented dynamic admin panels for managing users, recharge plans, and categories with seamless
-            REST API integratio</p>
-          <a href="https://github.com/sripoornima/Mobileprepaid"
-             target="_blank"
-             class="github-btn">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-card">
-        <img src="elecxa.jpg" alt="elecxa" class="project-img">
-        <div class="project-content">
-          <h3>"elecxa" - Electronic e-commerce</h3>
-          <p>Built a complete e-commerce platform for electronics products, with features like product browsing, cart,
-            and order placement
-            Structured the backend with category–subcategory–product hierarchy using JPA relationships and Spring
-            REST APIs
-            Implemented customer authentication, admin dashboard for inventory and order management.
-            </p>
-          <a href="https://github.com/Selvaganapathi-414/MyElecXa"
-             target="_blank"
-             class="github-btn">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Resume & Contact -->
-<section id="resume" class="cta">
-  <h2 class="section-title">My Resume</h2>
-  <p>Download my resume to learn more about my experience and qualifications.</p>
-  <a href="sripoornimadevi_resume.pdf" class="btn" download>
-    <i class="fas fa-download"></i> Download Resume
-  </a>
-
-</section>
-
-</div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Get in Touch</title>
-
-  <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <!-- Optional: Bootstrap 5 (for container & utilities) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-
-  <style>
-    :root {
-      --bg: #f8f9fa;
-      --card-bg: #ffffff;
-      --text: #212529;
-      --text-muted: #6c757d;
-      --shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-      --radius: 24px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      margin: 0;
-      padding: 0;
-    }
-
-    /* ===== GET IN TOUCH SECTION ===== */
-    .get-in-touch {
-      padding: 100px 20px;
-      text-align: center;
-    }
-
-    .get-in-touch h2 {
-      font-size: 2.3rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 50px;
-    }
-
-    .contact-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 32px 40px;
-      max-width: 520px;
-      margin: 0 auto 60px;
-      box-shadow: var(--shadow);
-      text-align: center;
-    }
-
-    .contact-card p {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      font-weight: 500;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 28px;
-      margin-bottom: 40px;
-    }
-
-    .social-icons a {
-      color: #000;
-      font-size: 1.6rem;
-      transition: all 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #0077b5;
-      transform: translateY(-3px);
-    }
-
-    /* Platform Buttons */
-    .platform-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .btn-gfg {
-      background: #2e8b57;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .btn-gfg:hover {
-      background: #236d44;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(46, 139, 87, 0.4);
-    }
-
-    .btn-leetcode {
-      background: #333333;
-      color: white;
-      padding: 12px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .btn-leetcode:hover {
-      background: #1a1a1a;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    }
-
-    .btn-leetcode img {
-      width: 20px;
-      height: 20px;
-      filter: brightness(0) invert(1);
-    }
-
-    /* Footer */
-    footer {
-      background: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Get in Touch Section -->
-  <section class="get-in-touch" id="contact">
-    <div class="container">
-      <h2>Get in Touch</h2>
-
-      <!-- Contact Card -->
-      <div class="contact-card">
-        <p>Feel free to reach out for collaborations or inquiries!</p>
-
-        <!-- Social Icons -->
-        <div class="social-icons">
-          <a href="mailto:sripoornimadevi24@gmail.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="linkedin.com/in/sripoornimadevi" target="_blank" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/sripoornima" target="_blank" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
+                <!-- Nav Items -->
+                <div id="nav-items" class="hidden md:flex items-center space-x-2">
+                    <a href="#home" class="px-3 py-2 rounded-md text-md font-medium"><i class="fas fa-home p-1"></i>
+                        Home</a>
+                    <a href="#about" class="px-3 py-2 rounded-md text-md font-medium"><i
+                            class="fas fa-circle-exclamation p-1"></i> About</a>
+                    <a href="#education" class="px-3 py-2 rounded-md text-md font-medium"><i
+                            class="fas fa-graduation-cap p-1"></i>
+                        Education</a>
+                    <a href="#skills" class="px-3 py-2 rounded-md text-md font-medium"><i class="fas fa-code p-1"></i>
+                        Skills</a>
+                    <a href="#portfolio" class="px-3 py-2 rounded-md text-md font-medium"><i
+                            class="fas fa-diagram-project p-1"></i> Projects</a>
+                    <a href="#resume" class="px-3 py-2 rounded-md text-md font-medium"><i
+                            class="fas fa-file-lines p-1"></i> Resume</a>
+                    <a href="#contact" class="px-2 py-2 rounded-md text-md font-medium"><i
+                            class="fas fa-envelope p-1"></i> Contact</a>
+                </div>
+            </div>
         </div>
 
-        <!-- Platform Buttons -->
-        <div class="platform-buttons">
-          <a href="https://www.geeksforgeeks.org/user/sripoornij5f2/" target="_blank" class="btn-gfg">
-            <i class="fas fa-code"></i> GeeksforGeeks
-          </a>
-          <a href="https://leetcode.com/u/sripoornimadevi24/" target="_blank" class="btn-leetcode">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/LeetCode_Logo_black_with_text.svg" alt="LeetCode">
-            LeetCode
-          </a>
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4"
+            style="background-color: #ffffff00; backdrop-filter: blur(10px);">
+            <a href="#home" class="block py-2"><i class="fas fa-home p-1"></i>
+                Home</a>
+            <a href="#about" class="block py-2"><i class="fas fa-circle-exclamation p-1"></i> About</a>
+            <a href="#education" class="block py-2"><i class="fas fa-graduation-cap p-1"></i>
+                Education</a>
+            <a href="#skills" class="block py-2"><i class="fas fa-code p-1"></i>
+                Skills</a>
+            <a href="#portfolio" class="block py-2"><i class="fas fa-diagram-project p-1"></i> Projects</a>
+            <a href="#resume" class="block py-2"><i class="fas fa-file-lines p-1"></i>
+                Resume</a>
+            <a href="#contact" class="block py-2"><i class="fas fa-envelope p-1"></i>
+                Contact</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-<footer>
-  © 2025 Sripoornimadevi T S All rights reserved. 
-</footer>
+    </nav>
 
 
+    <!-- Hero Section -->
+    <section id="home" class="flex items-center justify-center">
+        <div class="text-center max-w-3xl mx-auto px-4 fade-in">
+            <h1 id="hero-title" class="text-4xl sm:text-5xl font-bold mb-4"></h1>
+            <p id="hero-subtitle" class="text-xl mb-6"> </p>
+            <a href="#portfolio"
+                class="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-black hover:text-white transition">View
+                My
+                Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-12 fade-in">About Me</h2>
+            <div class="flex flex-col items-center gap-8 fade-in">
+                <img src="images\1456 copy.jpg" alt="Your Photo" class="w-44 h-44 rounded-full object-cover shadow-lg">
+                <div>
+                    <p class="text-gray-600 leading-relaxed text-center">
+                        Motivated and quick-learning Computer Science graduate with a strong foundation in
+                        programming, web development, and software engineering principles. Built multiple full
+                        stack projects using modern frameworks and tools, demonstrating an ability to work across
+                        the full development lifecycle. Adept at applying problem-solving skills, proven by
+                        completing 500+ coding challenges. Eager to contribute to software development teams,
+                        learn from real-world challenges, and grow as a technology professional.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-12 fade-in">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in">
+
+                <!-- Degree -->
+                <div class="bg-black text-white shadow-md rounded-2xl p-6 text-center">
+                    <h3 class="text-xl font-semibold">B.E – Computer Science</h3>
+                    <p class="text-gray-300 mt-2">Knowledge Institute of Technology(KIOT)</p>
+                    <p class="text-gray-400 text-sm">2021 – 2025</p>
+                    <p class="text-gray-400 text-sm">CGPA: 8.1</p>
+                </div>
+
+                <!-- Class 12th -->
+                <div class="bg-gray-300 shadow-md rounded-2xl p-6 text-center">
+                    <h3 class="text-xl font-semibold text-black">Class 12th</h3>
+                    <p class="text-gray-600 mt-2">Sri Vidya Mandir Senior Secondary School</p>
+                    <p class="text-gray-500 text-sm">2020 – 2021</p>
+                    <p class="text-gray-500 text-sm">Percentage: 83%</p>
+                </div>
+
+                <!-- Class 10th -->
+                <div class="bg-white shadow-md rounded-2xl p-6 text-center">
+                    <h3 class="text-xl font-semibold text-black">Class 10th</h3>
+                    <p class="text-gray-600 mt-2">Sri Vidya Mandir Senior Secondary School</p>
+                    <p class="text-gray-500 text-sm">2018 – 2019</p>
+                    <p class="text-gray-500 text-sm">Percentage: 81%</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white text-center mb-12 fade-in">My Skills</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-white">
+
+                <!-- Languages -->
+                <div class="bg-gray-400 p-6 rounded-2xl shadow-lg fade-in">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fa-solid fa-code mr-2"></i> Languages
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag"><img src="./images/java.png" alt="mvc" class="w-6 h-6 mr-2"> </i>
+                            Java</span>
+                        <span class="skill-tag">
+                            <i class="devicon-c-plain colored text-2xl mr-2"></i> C
+                        </span>
+                        <span class="skill-tag">
+                            <i class="fa-solid fa-database text-red-500 mr-2"></i> PL/SQL
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="bg-gray-400 p-6 rounded-2xl shadow-lg fade-in">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fa-solid fa-database mr-2"></i> Databases
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag">
+                            <i class="devicon-mysql-plain colored text-2xl mr-2"></i> MySQL
+                        </span>
+                        <span class="skill-tag">
+                            <i class="devicon-oracle-plain colored text-2xl mr-2"></i> Oracle
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Backend Technologies -->
+                <div class="bg-gray-400 p-6 rounded-2xl shadow-lg fade-in">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fa-solid fa-server mr-2"></i> Backend
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag"><i class="devicon-spring-plain colored text-2xl mr-2"></i>
+                            Spring Frameworks</span>
+                        <span class="skill-tag"><img src="./images/spring-boot.svg" alt="mvc" class="w-8 h-8 mr-2"> </i>
+                            Spring Boot
+                            3</span>
+                        <span class="skill-tag"><img src="./images/mvc.png" alt="mvc" class="w-8 h-8 mr-2"> </i> Spring
+                            MVC</span>
+                        <span class="skill-tag"><i class="devicon-hibernate-plain colored text-2xl mr-2"></i>
+                            Hibernate</span>
+                        <span class="skill-tag"><img src="./images/jdbc.png" alt="jdbc" class="w-7 h-7 mr-2"> </i>
+                            JDBC</span>
+                        <span class="skill-tag"><img src="./images/api.png" alt="api" class="w-7 h-7 mr-2"> </i> REST
+                            APIs</span>
+                    </div>
+                </div>
+
+                <!-- Frontend Technologies -->
+                <div class="bg-gray-400 p-6 rounded-2xl shadow-lg fade-in">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fa-solid fa-laptop-code mr-2"></i> Frontend
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag"><i class="devicon-html5-plain colored text-2xl mr-2"></i> HTML5</span>
+                        <span class="skill-tag"><i class="devicon-css3-plain colored text-2xl mr-2"></i> CSS3</span>
+                        <span class="skill-tag"><i class="devicon-javascript-plain colored text-2xl mr-2"></i>
+                            JavaScript</span>
+                        <span class="skill-tag"><i class="devicon-bootstrap-plain colored text-2xl mr-2"></i>
+                            Bootstrap</span>
+                        <span class="skill-tag"><i class="devicon-thymeleaf-plain colored text-2xl mr-2"></i>
+                            Thymeleaf</span>
+                    </div>
+                </div>
+
+                <!-- Development Tools -->
+                <div class="bg-gray-400 p-6 rounded-2xl shadow-lg fade-in">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fa-solid fa-wrench mr-2"></i> Tools
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag"><i class="devicon-eclipse-plain colored text-2xl mr-2"></i>
+                            Eclipse</span>
+                        <span class="skill-tag"><i class="devicon-vscode-plain colored text-2xl mr-2"></i> VS
+                            Code</span>
+                        <span class="skill-tag"><i class="devicon-postman-plain colored text-2xl mr-2"></i>
+                            Postman</span>
+                        <span class="skill-tag"><i class="devicon-photoshop-plain colored text-2xl mr-2"></i>
+                            Adobe Photoshop</span>
+                        <span class="skill-tag"><i class="devicon-git-plain colored text-2xl mr-2"></i> Git &
+                            GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Methodologies -->
+                <div class="bg-gray-400 p-6 rounded-2xl shadow-lg fade-in">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                        <i class="fa-solid fa-project-diagram mr-2"></i> Methodologies
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag"><img src="./images/sdlc.png" alt="sdlc" class="w-7 h-7 mr-2"> </i>
+                            SDLC</span>
+                        <span class="skill-tag"><img src="./images/agile.png" alt="sdlc" class="w-7 h-7 mr-2"> </i>
+                            Agile</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-12 fade-in">My Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden fade-in">
+                    <img src="images\Mobicom.png" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">"Mobicom" - Mobile Recharge App</h3>
+                        <p class="text-gray-600 mb-4">Developed a recharge web app using Spring Boot, MySQL, and
+                            JavaScript for data,
+                            talktime, and validity plans</p>
+                        <a href="https://github.com/sripoornima/Mobileprepaid.git"
+                            class="text-white bg-black hover:bg-white hover:text-black p-2 rounded-3xl"
+                            target="_blank">GitHub</a>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden fade-in">
+                    <img src="images\elecxa.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">"elecxa" - Electronic e-commerce</h3>
+                        <p class="text-gray-600 mb-4">Built a job portal using Spring MVC and Thymeleaf for job listings
+                            and applications. </p>
+                        <a href="https://github.com/Selvaganapathi-414/MyElecXa.git"
+                            class="text-white bg-black hover:bg-white hover:text-black p-2 rounded-3xl"
+                            target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-20 bg-black m-5" style="color: white;border-radius: 25px;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 fade-in">My Resume</h2>
+            <div class="max-w-lg mx-auto text-center fade-in">
+                <p class=" mb-6">Download my resume to learn more about my experience and qualifications.
+                </p>
+                <a href="Sripoornimadevi-Resume.pdf" download
+                    class="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-600 hover:text-white transition">Download
+                    Resume <i class="ml-1 fas fa-download"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-12 fade-in">Get in Touch</h2>
+            <div class="max-w-lg mx-auto fade-in">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <p class="text-gray-600 mb-4 text-center">Feel free to reach out for collaborations or inquiries!
+                    </p>
+                    <div class="flex justify-center">
+                        <p class="mx-5 "><a href="mailto:Sripoornimadevi24@gmail.com"><i
+                                    class="fas fa-envelope text-2xl"></i></a></p>
+
+                        <p class="mr-5"><a href="https://www.linkedin.com/in/sripoornimadevi/" class="text-black"
+                                target="_blank"><i class="devicon-linkedin-plain text-2xl"></i></a>
+                        </p>
+                        <p><a href="https://github.com/sripoornima" target="_blank" class="text-black"><i
+                                    class="devicon-github-plain text-2xl"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-7 flex flex-wrap justify-center gap-4">
+
+            <!-- LeetCode -->
+            <a href="https://www.geeksforgeeks.org/profile/sripoornij5f2" target="_blank"
+                class="inline-flex items-center px-4 py-2 bg-green-800 text-white rounded-lg shadow hover:bg-green-700 transition">
+                <img src="images\gfg.svg" alt="gfg" class="w-7 h-7 mr-2">
+                GeeksforGeeks
+            </a>
+
+            <!-- GeeksforGeeks -->
+            <a href="https://leetcode.com/u/sripoornimadevi24/" target="_blank"
+                class="inline-flex items-center px-4 py-2 bg-gray-500 text-white rounded-lg shadow hover:bg-gray-800 transition">
+                <img src="images\leetcode.png" alt="gfg" class="w-7 h-7 mr-2">
+                LeetCode
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 SRIPOORNIMADEVI T S. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Typewriter Effect
+        function typeWriter(element, text, speed, callback) {
+            let i = 0;
+            element.innerHTML = '';
+            function typeText() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeText, speed);
+                } else if (callback) {
+                    callback();
+                }
+            }
+            typeText();
+        }
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Apply typewriter effect to hero section
+        window.addEventListener('load', () => {
+            const title = document.getElementById('hero-title');
+            const subtitle = document.getElementById('hero-subtitle');
+            const titleText = "Hi, I'm Sripoornimadevi T S";
+            const subtitleText = "Software Engineering Graduate with a passion for innovation and problem solving.";
+
+            // Start typing title, then subtitle
+            typeWriter(title, titleText, 100, () => {
+                typeWriter(subtitle, subtitleText, 50);
+            });
+        });
+
+        // Fade-in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(element => observer.observe(element));
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
-<script>
-  // Auto-typing effect for h2
-  const text = "Software Engineering Graduate with a keen interest\nin innovation and problem-solving.";
-  const typingElement = document.getElementById("typing-text");
-  let index = 0;
-  
-  function typeText() {
-    if(index < text.length){
-      const char = text[index] === "\n" ? "<br>" : text[index];
-      typingElement.innerHTML += char;
-      index++;
-      setTimeout(typeText, 50); // typing speed in ms
-    }
-  }
-  
-  // Clear the text first
-  typingElement.innerHTML = "";
-  window.onload = typeText;
-  </script>
+
 </html>
